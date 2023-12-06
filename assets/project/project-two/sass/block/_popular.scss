@@ -1,0 +1,109 @@
+.popular-prod {
+	padding: 45px 0 45px;
+	&__subtitle {
+		font-size: 16px;
+		color: #8e8e8e;
+		margin-bottom: 30px;
+	}
+	.slider-product {
+		position: relative;
+		&__btn {
+			position: absolute;
+			display: flex;
+			width: 120px;
+			justify-content: space-between;
+			align-items: center;
+			top: -60px;
+			right: 0;
+		}
+		&__next, &__prev {
+			width: 40px;
+			svg {
+				fill: #8e8e8e;
+				cursor: pointer;
+				transition: fill .4s;
+				&:hover {
+					fill: #000000;
+				}
+			}
+		}
+		&__wrapper {
+			max-width: 1100px;
+			position: relative;
+			padding: 0 25px;
+		}
+		&__list {
+			position: relative;
+			display: flex;
+			max-width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			scroll-behavior: smooth;
+			cursor: pointer;
+			&_dragging {
+				cursor: grab;
+				scroll-behavior: auto;
+			}
+		}
+		&__item {
+			min-width: 33.333333%;
+			padding: 0 25px;
+			user-select: none;
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+		&__link:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+		&__img {
+			overflow: hidden;
+			img {
+				transition: all 0.6s;
+			}
+		}
+		&__descr {
+			padding-top: 20px;
+		}
+		&__title {
+			color: #000000;
+			font-size: 16px;
+			letter-spacing: 0.08em;
+		}
+		&__type {
+			color: #8e8e8e;
+			margin-top: 10px;
+		}
+		&__price {
+			margin-top: 15px;
+			color: #000000;
+			font-size: 18px;
+		}
+		&__list-dots {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items:center;
+			margin-top: 30px;
+		}
+		&__dot {
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 8px;
+			background-color: #8e8e8e;
+			opacity: 0.4;
+			margin-right: 15px;
+			cursor: pointer;
+			&_active {
+				width: 14px;
+				height: 14px;
+				border: 4px solid #ffffff;
+				outline: 1px solid #000000;
+				background-color: #000000;
+			}
+		}
+	}
+}

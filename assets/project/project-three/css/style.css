@@ -1,0 +1,168 @@
+/* Import Google font - M PLUS 1 */
+  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS 1', sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ededed;
+
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  width: 100%;
+  height: 500px;
+  border-radius: 30px;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 23px 2px rgba(34, 60, 80, 0.17);
+  -moz-box-shadow: 0px 0px 23px 2px rgba(34, 60, 80, 0.17);
+  box-shadow: 0px 0px 23px 2px rgba(34, 60, 80, 0.17);
+}
+
+.wrapper_display {
+  padding: 20px 20px 10px 20px;
+  /* background-color: #ff9000; */
+  background: linear-gradient(310deg, #000 60%, #534d46);
+  border-radius: 0 0 30px 0px;
+  -webkit-box-shadow: 0px -10px 26px -1px rgba(65, 67, 69, 0.8) inset;
+  -moz-box-shadow: 0px -10px 26px -1px rgba(65, 67, 69, 0.8) inset;
+  box-shadow: 0px -10px 26px -1px rgba(65, 67, 69, 0.8) inset;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.calc_screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100px;
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.calc_screen input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  color: #8e8e8e;
+  background: none;
+  text-align: right;
+}
+
+input#input {
+  font-size: 30px;
+  color: #fff;
+}
+
+.buttons {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "button_delete button_delete button_delete button_delete"
+    "ac plus-minus percent division"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero dot equal equal";
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 0px 20px;
+}
+
+.button_delete { grid-area: button_delete; }
+.ac { grid-area: ac; }
+.plus-minus { grid-area: plus-minus; }
+.percent { grid-area: percent; }
+.division { grid-area: division; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.multiply { grid-area: multiply; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.minus { grid-area: minus; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.plus { grid-area: plus; }
+.zero { grid-area: zero; }
+.dot { grid-area: dot; }
+.equal { grid-area: equal; }
+
+.btn {
+  width: 35px;
+  height: 35px;
+  color: #000;
+  border-radius: 20%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.equal {
+  grid-area: equal;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.button_delete {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 3px;
+}
+
+.del {
+  font-size: 14px;
+  height: 21px;
+  line-height: 19px;
+  border-radius: 10px;
+  color: #fff;
+  background: #53504f;
+}
+
+.operator {
+  color: #fff;
+  background: #53504f;
+  line-height: 32px;
+}
+
+
+.operator:hover, .del:hover {
+  background: #000;
+}

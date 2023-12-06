@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Optima';
+    src: url('../fonts/Optima-Bold.eot'),
+         url('../fonts/Optima-Bold.woff') format('woff'),
+         url('../fonts/Optima-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700 ;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('../fonts/Optima.eot'),
+         url('../fonts/Optima.woff') format('woff'),
+         url('../fonts/Optima.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+body {
+    font-family: 'Optima';
+    background-color: #FFFFFF;
+    height: 100%;
+    color: #000000;
+}
+
+[class*=__container] {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+}
