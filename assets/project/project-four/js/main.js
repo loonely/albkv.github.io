@@ -46,7 +46,7 @@ function getExchangeRate() {
 		amountValue = 1;
 	}
 
-	var requestURL = `https://api.apilayer.com/currency_data/live?apikey=Hc7SfjZAuAdAUc05VUDpl1kGq7g6GOg6?base=${fromCur.value}`;
+	var requestURL = `https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_PC70xPLmKRyqUo26dZ7rO9jfr4dhFEIt2ntQXjgU&base_currency=${fromCur.value}`;
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
 	request.responseType = 'json';
@@ -54,7 +54,7 @@ function getExchangeRate() {
 
 	request.onload = function () {
 		var response = request.response;
-		let exRate = response.rates[toCur.value]
+		let exRate = response.data[toCur.value]
 		let totalExRate = (amountValue * exRate).toFixed(2);
 		outExchenge.innerText = `${amountValue} ${fromCur.value} = ${totalExRate} ${toCur.value}`;
 	}
