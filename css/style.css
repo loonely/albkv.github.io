@@ -136,6 +136,7 @@ body {
 
 .profile-image {
   width: 200px;
+  margin-bottom: 1rem;
   animation: bounce 1s infinite alternate;
 }
 
