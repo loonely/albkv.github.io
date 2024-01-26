@@ -43,7 +43,7 @@ h2::selection {
   align-items: center;
   justify-content: center;
   margin-top: 8rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .header-container>div {
